@@ -1,123 +1,80 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-}
-
-:root {
-  --primary-color: #2d0042;
-  --secondary1-color: #7804ad;
-  --secondary-color: #6c75ec;
-  --background-color: #000000;
-  --text-color: #f1f1f1;
-}
-
 body {
-  background-color: var(--background-color);
-  color: var(--text-color);
   padding: 20px;
   overflow-x: hidden;
   overflow-y: auto;
 }
+
 .loader-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--background-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    animation: fadeOut 4s ease-in-out forwards; 
-    pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 4s ease-in-out forwards;
+  pointer-events: none;
 }
 
 .loader {
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(
-      165deg,
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(165deg,
       rgba(255, 255, 255, 1) 0%,
       rgb(220, 220, 220) 40%,
       rgb(170, 170, 170) 98%,
-      rgb(10, 10, 10) 100%
-    );
-    border-radius: 50%;
-    position: relative;
+      rgb(10, 10, 10) 100%);
+  border-radius: 50%;
+  position: relative;
 }
+
 /* https://cssloaders.github.io */
-.loader:before { 
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
-    border-bottom: 0 solid #ffffff05;
-    box-shadow: 0 -10px 20px 20px #ffffff40 inset,
-      0 -5px 15px 10px #ffffff50 inset, 0 -2px 5px #ffffff80 inset,
-      0 -3px 2px #ffffffbb inset, 0 2px 0px #ffffff, 0 2px 3px #ffffff,
-      0 5px 5px #ffffff90, 0 10px 15px #ffffff60, 0 10px 20px 20px #ffffff40;
-    filter: blur(3px);
-    animation: 2s rotate linear infinite;
+.loader:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border-bottom: 0 solid #ffffff05;
+  box-shadow: 0 -10px 20px 20px #ffffff40 inset,
+    0 -5px 15px 10px #ffffff50 inset, 0 -2px 5px #ffffff80 inset,
+    0 -3px 2px #ffffffbb inset, 0 2px 0px #ffffff, 0 2px 3px #ffffff,
+    0 5px 5px #ffffff90, 0 10px 15px #ffffff60, 0 10px 20px 20px #ffffff40;
+  filter: blur(3px);
+  animation: 2s rotate linear infinite;
 }
 
 @keyframes rotate {
-    100% { transform: rotate(360deg); }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    70% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
+  0% {
+    opacity: 1;
+  }
 
+  70% {
+    opacity: 1;
+  }
 
-h1 {
-  font-weight: bold;
-  font-size: 2em;
-  margin-bottom: 20px;
-  margin-top: 40px;
-  margin-left: 30px;
-  color: var(--text-color);
-}
-
-h2 {
-  font-size: 1.5em;
-  margin-bottom: 15px;
-  margin-top: 30px;
-  margin-left: 30px;
-  color: var(--text-color);
-}
-
-h3 {
-  font-size: 1.3em;
-  margin-bottom: 12px;
-  margin-top: 25px;
-  margin-left: 30px;
-  margin-right: 50px;
-  color: var(--text-color);
-  font-weight: normal;
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .banner {
   width: 100%;
   height: 50vh;
   max-height: 400px;
-  background: linear-gradient(
-    135deg,
-    var(--secondary-color) 50%,
-    var(--secondary1-color) 100%
-  );
+  background: linear-gradient(135deg,
+      var(--secondary-color) 50%,
+      var(--secondary1-color) 100%);
   border-radius: 20px;
   margin-bottom: 30px;
   display: flex;
@@ -139,32 +96,35 @@ h3 {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle,rgba(255, 255, 255, 0.1) 0%,transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
   animation: pulse 4s ease-in-out infinite;
 }
 
 @keyframes pulse {
+
   0%,
   100% {
     transform: scale(1);
     opacity: 0.5;
   }
+
   50% {
     transform: scale(1.1);
     opacity: 0.8;
   }
 }
+
 .carousel-container {
   overflow-x: auto;
   overflow-y: hidden;
-  margin-left: -20px;
-  margin-right: -20px;
-  width: calc(100% + 40px);
-  padding-left: 40px;
-  padding-right: 40px;
+
+
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
   scrollbar-gutter: stable;
-  -webkit-mask-image: linear-gradient(90deg,transparent 0%,black 5%,black 95%,transparent 100%);
-  mask-image: linear-gradient(90deg,transparent 0%,black 5%,black 95%,transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 5%, black 95%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, black 5%, black 95%, transparent 100%);
 }
 
 .carousel-container::-webkit-scrollbar {
@@ -199,7 +159,7 @@ h3 {
   aspect-ratio: 16 / 9;
   min-width: 400px;
   max-height: 300px;
-  background: linear-gradient(135deg,var(--secondary-color) 0%,var(--secondary1-color) 100%);
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary1-color) 100%);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -244,12 +204,10 @@ h3 {
   transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
   opacity: 0;
   transform: scale(0.95);
-  background-image: linear-gradient(
-    -45deg,
-    transparent 30%,
-    rgba(255, 255, 255, 0.4),
-    transparent 70%
-  );
+  background-image: linear-gradient(-45deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.4),
+      transparent 70%);
   background-size: 600%;
   animation-duration: 7s;
   animation-timing-function: linear;
@@ -284,76 +242,72 @@ h3 {
 }
 
 body:has(.carousel-item:nth-child(1):hover) .banner {
-    background: linear-gradient(135deg, #6c75ec, #7804ad);
+  background: linear-gradient(135deg, #6c75ec, #7804ad);
 }
 
 body:has(.carousel-item:nth-child(2):hover) .banner {
-    background: linear-gradient(135deg, #ff0f7b, #f89b29);
+  background: linear-gradient(135deg, #ff0f7b, #f89b29);
 }
 
 body:has(.carousel-item:nth-child(3):hover) .banner {
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
 }
 
 body:has(.carousel-item:nth-child(4):hover) .banner {
-    background: linear-gradient(135deg, #11998e, #38ef7d);
+  background: linear-gradient(135deg, #11998e, #38ef7d);
 }
 
 body:has(.carousel-item:nth-child(5):hover) .banner {
-    background: linear-gradient(135deg, #f12711, #f5af19);
+  background: linear-gradient(135deg, #f12711, #f5af19);
 }
 
 body:has(.carousel-item:hover) .banner h2 {
-    display: none;
+  display: none;
 }
 
 
 body:has(.carousel-item:hover) .banner::after {
-    display: block;
-    font-weight: bold;
-    font-size: 2em; 
-    margin-bottom: 20px;
-    margin-left: 30px;
-    color: white;
-    animation: textFadeIn 0.3s ease-in-out;
+  display: block;
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  color: white;
+  animation: textFadeIn 0.3s ease-in-out;
 }
 
 
 body:has(.carousel-item:nth-child(1):hover) .banner::after {
-    content: "Premier Titre"; 
+  content: "Premier Titre";
 }
 
 
 body:has(.carousel-item:nth-child(2):hover) .banner::after {
-    content: "Deuxième Titre";
+  content: "Deuxième Titre";
 }
 
 body:has(.carousel-item:nth-child(3):hover) .banner::after {
-    content: "Troisième Titre";
+  content: "Troisième Titre";
 }
 
 body:has(.carousel-item:nth-child(4):hover) .banner::after {
-    content: "Quatrième Titre";
+  content: "Quatrième Titre";
 }
 
 body:has(.carousel-item:nth-child(5):hover) .banner::after {
-    content: "Cinquième Titre";
+  content: "Cinquième Titre";
 }
 
 
 @keyframes textFadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-@keyframes animation-shine {
-  0% {
-    background-position: 100%;
+  from {
+    opacity: 0;
+    transform: translateY(10px);
   }
-  30% {
-    background-position: 0%;
-  }
-  100% {
-    background-position: 0%;
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -367,7 +321,7 @@ body:has(.carousel-item:nth-child(5):hover) .banner::after {
 @media (max-width: 768px) {
   body::-webkit-scrollbar {
     display: none;
-}
+  }
 
   body {
     scrollbar-width: none;
@@ -399,6 +353,7 @@ body:has(.carousel-item:nth-child(5):hover) .banner::after {
     min-width: 100%;
     aspect-ratio: 16 / 9;
   }
+
   .banner {
     height: 200px;
     font-size: 24px;
@@ -413,9 +368,11 @@ body:has(.carousel-item:nth-child(5):hover) .banner::after {
   h3 {
     margin-left: 15px;
   }
+
   .carousel-item h2 {
     margin-left: 0;
   }
+
   .carousel-item h3 {
     margin-left: 0;
   }

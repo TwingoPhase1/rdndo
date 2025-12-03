@@ -7,223 +7,161 @@
   <title>Personnages par Arc</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!DOCTYPE html>
-  <html lang="fr">
+  <link
+    href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700;900&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/stylecharact.css" />
+</head>
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personnages par Arc</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700;900&family=Roboto:wght@400;700&display=swap"
-      <!DOCTYPE html>
-    <html lang="fr">
+<body>
+  <header>
+    <nav style="display: flex; align-items: center; width: 100%; justify-content: space-between;">
+      <li><span>
+          <h6>青春ブタ野郎</h6>
+        </span></li>
+      <li>
+        <a href="#" id="dynamic-arc-btn" class="btn-shine nav-btn"
+          style="margin: 0; padding: 10px 20px; font-size: 0.9rem; opacity: 0; transition: opacity 0.3s ease; text-decoration: none; display: inline-block; color: inherit;">Arc
+          Actuel</a>
+      </li>
+    </nav>
+  </header>
+  <div id="arc1" class="arc-section" data-arc-name="Arc 1 : Lycée">
+    <div class="arc-header-wrapper">
+      <a href="arc1.html" class="btn-shine nav-btn">Arc 1 : Lycée</a>
+    </div>
 
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Personnages par Arc</title>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <!DOCTYPE html>
-      <html lang="fr">
-
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Personnages par Arc</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700;900&family=Roboto:wght@400;700&display=swap"
-          rel="stylesheet" />
-        <link rel="stylesheet" href="css/stylecharact.css" />
-      </head>
-
-    <body>
-      <header>
-        <nav style="display: flex; align-items: center; width: 100%; justify-content: space-between;">
-          <li><span>
-              <h6>青春ブタ野郎</h6>
-            </span></li>
-          <li class="nav-item-dropdown" style="position: relative;">
-            <button id="dynamic-arc-btn" class="btn-shine nav-btn"
-              style="margin: 0; padding: 10px 20px; font-size: 0.9rem; opacity: 0; transition: opacity 0.3s ease;">Arc
-              Actuel</button>
-            <div id="arc-dropdown" class="dropdown-content">
-              <a href="#arc1" class="dropdown-item">Arc 1 : Lycée</a>
-              <a href="#arc2" class="dropdown-item">Arc 2 : Dreaming Girl</a>
-              <a href="#arc3" class="dropdown-item">Arc 3 : Université</a>
-            </div>
-          </li>
-        </nav>
-      </header>
-
-      <div class="arc-navigation">
-        <a href="#arc1" class="btn-shine nav-btn">Aller à l'Arc 1</a>
-        <a href="#arc2" class="btn-shine nav-btn">Aller à l'Arc 2</a>
-        <a href="#arc3" class="btn-shine nav-btn">Aller à l'Arc 3</a>
-      </div>
-
-      <div id="arc1" class="arc-section" data-arc-name="Arc 1 : Lycée">
-        <div class="arc-header-wrapper">
-          <span class="btn-shine arc-title-label">Arc 1 : Lycée</span>
+    <div class="character-grid">
+      <!-- Mai Sakurajima Card -->
+      <div class="character-card">
+        <div class="card-header">
+          <h3>Mai Sakurajima</h3>
         </div>
-
-        <div class="character-grid">
-          <!-- Mai Sakurajima Card -->
-          <div class="character-card">
-            <div class="card-header">
-              <h3>Mai Sakurajima</h3>
-            </div>
-            <div class="card-gallery">
-              <div class="gallery-item">Mai 1</div>
-              <div class="gallery-item">Mai 2</div>
-              <div class="gallery-item">Mai 3</div>
-              <div class="gallery-item">Mai 4</div>
-              <div class="gallery-item">Mai 5</div>
-              <div class="gallery-item">Mai 6</div>
-            </div>
-            <div class="card-body">
-              <p><strong>Statut :</strong> Actrice</p>
-              <p><strong>Rôle :</strong> Héroïne</p>
-              <p class="card-desc">Mai est l'héroïne principale. Elle souffre du syndrome de l'adolescence qui la rend
-                invisible aux yeux des autres...</p>
-            </div>
-          </div>
-
-          <!-- Sakuta Azusagawa Card -->
-          <div class="character-card">
-            <div class="card-header">
-              <h3>Sakuta Azusagawa</h3>
-            </div>
-            <div class="card-gallery">
-              <div class="gallery-item">Sakuta 1</div>
-              <div class="gallery-item">Sakuta 2</div>
-              <div class="gallery-item">Sakuta 3</div>
-              <div class="gallery-item">Sakuta 4</div>
-            </div>
-            <div class="card-body">
-              <p><strong>Statut :</strong> Étudiant</p>
-              <p><strong>Rôle :</strong> Protagoniste</p>
-              <p class="card-desc">Le seul qui se souvient de Mai. Il aide les autres à résoudre leur syndrome.</p>
-            </div>
-          </div>
+        <div class="card-gallery">
+          <div class="gallery-item">Mai 1</div>
+          <div class="gallery-item">Mai 2</div>
+          <div class="gallery-item">Mai 3</div>
+          <div class="gallery-item">Mai 4</div>
+          <div class="gallery-item">Mai 5</div>
+          <div class="gallery-item">Mai 6</div>
+        </div>
+        <div class="card-body">
+          <p><strong>Statut :</strong> Actrice</p>
+          <p><strong>Rôle :</strong> Héroïne</p>
+          <p class="card-desc">Mai est l'héroïne principale. Elle souffre du syndrome de l'adolescence qui la rend
+            invisible aux yeux des autres...</p>
         </div>
       </div>
 
-      <div id="arc2" class="arc-section" data-arc-name="Arc 2 : Dreaming Girl">
-        <div class="arc-header-wrapper">
-          <span class="btn-shine arc-title-label">Arc 2 : Dreaming Girl</span>
+      <!-- Sakuta Azusagawa Card -->
+      <div class="character-card">
+        <div class="card-header">
+          <h3>Sakuta Azusagawa</h3>
         </div>
-
-        <div class="character-grid">
-          <!-- Shoko Makinohara Card -->
-          <div class="character-card">
-            <div class="card-header">
-              <h3>Shoko Makinohara</h3>
-            </div>
-            <div class="card-gallery">
-              <div class="gallery-item">Shoko 1</div>
-              <div class="gallery-item">Shoko 2</div>
-              <div class="gallery-item">Shoko 3</div>
-              <div class="gallery-item">Shoko 4</div>
-            </div>
-            <div class="card-body">
-              <p><strong>Statut :</strong> Mystère</p>
-              <p><strong>Rôle :</strong> Guide</p>
-              <p class="card-desc">La fille des rêves qui apparaît quand Sakuta a besoin d'aide.</p>
-            </div>
-          </div>
+        <div class="card-gallery">
+          <div class="gallery-item">Sakuta 1</div>
+          <div class="gallery-item">Sakuta 2</div>
+          <div class="gallery-item">Sakuta 3</div>
+          <div class="gallery-item">Sakuta 4</div>
+        </div>
+        <div class="card-body">
+          <p><strong>Statut :</strong> Étudiant</p>
+          <p><strong>Rôle :</strong> Protagoniste</p>
+          <p class="card-desc">Le seul qui se souvient de Mai. Il aide les autres à résoudre leur syndrome.</p>
         </div>
       </div>
+    </div>
+  </div>
 
-      <div id="arc3" class="arc-section" data-arc-name="Arc 3 : Université">
-        <div class="arc-header-wrapper">
-          <span class="btn-shine arc-title-label">Arc 3 : Université</span>
+  <div id="arc2" class="arc-section" data-arc-name="Arc 2 : Dreaming Girl">
+    <div class="arc-header-wrapper">
+      <a href="arc2.html" class="btn-shine nav-btn">Arc 2 : Dreaming Girl</a>
+    </div>
+
+    <div class="character-grid">
+      <!-- Shoko Makinohara Card -->
+      <div class="character-card">
+        <div class="card-header">
+          <h3>Shoko Makinohara</h3>
         </div>
-
-        <div class="character-grid">
-          <!-- New Character Card -->
-          <div class="character-card">
-            <div class="card-header">
-              <h3>Nouveau Personnage</h3>
-            </div>
-            <div class="card-gallery">
-              <div class="gallery-item">Photo 1</div>
-              <div class="gallery-item">Photo 2</div>
-              <div class="gallery-item">Photo 3</div>
-              <div class="gallery-item">Photo 4</div>
-            </div>
-            <div class="card-body">
-              <p><strong>Statut :</strong> Étudiant</p>
-              <p><strong>Rôle :</strong> Nouveau venu</p>
-              <p class="card-desc">L'histoire continue à l'université avec de nouveaux défis.</p>
-            </div>
-          </div>
+        <div class="card-gallery">
+          <div class="gallery-item">Shoko 1</div>
+          <div class="gallery-item">Shoko 2</div>
+          <div class="gallery-item">Shoko 3</div>
+          <div class="gallery-item">Shoko 4</div>
+        </div>
+        <div class="card-body">
+          <p><strong>Statut :</strong> Mystère</p>
+          <p><strong>Rôle :</strong> Guide</p>
+          <p class="card-desc">La fille des rêves qui apparaît quand Sakuta a besoin d'aide.</p>
         </div>
       </div>
+    </div>
+  </div>
 
-      <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          const sections = document.querySelectorAll('.arc-section');
-          const navBtn = document.getElementById('dynamic-arc-btn');
-          const dropdown = document.getElementById('arc-dropdown');
-          const dropdownItems = document.querySelectorAll('.dropdown-item');
+  <div id="arc3" class="arc-section" data-arc-name="Arc 3 : Université">
+    <div class="arc-header-wrapper">
+      <a href="arc3.html" class="btn-shine nav-btn">Arc 3 : Université</a>
+    </div>
 
-          // Intersection Observer for updating button text
-          const observerOptions = {
-            root: null,
-            rootMargin: '-50% 0px -50% 0px',
-            threshold: 0
-          };
+    <div class="character-grid">
+      <!-- New Character Card -->
+      <div class="character-card">
+        <div class="card-header">
+          <h3>Nouveau Personnage</h3>
+        </div>
+        <div class="card-gallery">
+          <div class="gallery-item">Photo 1</div>
+          <div class="gallery-item">Photo 2</div>
+          <div class="gallery-item">Photo 3</div>
+          <div class="gallery-item">Photo 4</div>
+        </div>
+        <div class="card-body">
+          <p><strong>Statut :</strong> Étudiant</p>
+          <p><strong>Rôle :</strong> Nouveau venu</p>
+          <p class="card-desc">L'histoire continue à l'université avec de nouveaux défis.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-          const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                const arcName = entry.target.getAttribute('data-arc-name');
-                navBtn.textContent = arcName;
-                navBtn.style.opacity = '1';
-              }
-            });
-          }, observerOptions);
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.arc-section');
+      const navBtn = document.getElementById('dynamic-arc-btn');
 
-          sections.forEach(section => {
-            observer.observe(section);
-          });
+      // Intersection Observer for updating button text
+      const observerOptions = {
+        root: null,
+        rootMargin: '-50% 0px -50% 0px',
+        threshold: 0
+      };
 
-          // Hide button when at top
-          window.addEventListener('scroll', () => {
-            if (window.scrollY < 100) {
-              navBtn.style.opacity = '0';
-              dropdown.classList.remove('show'); // Close dropdown if scrolling to top
-            }
-          });
-
-          // Dropdown Logic
-          navBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            dropdown.classList.toggle('show');
-          });
-
-          // Close dropdown when clicking outside
-          document.addEventListener('click', (e) => {
-            if (!navBtn.contains(e.target) && !dropdown.contains(e.target)) {
-              dropdown.classList.remove('show');
-            }
-          });
-
-          // Close dropdown when clicking an item
-          dropdownItems.forEach(item => {
-            item.addEventListener('click', () => {
-              dropdown.classList.remove('show');
-            });
-          });
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const arcName = entry.target.getAttribute('data-arc-name');
+            navBtn.textContent = arcName;
+            navBtn.style.opacity = '1';
+            navBtn.href = entry.target.id + '.html';
+          }
         });
-      </script>
+      }, observerOptions);
 
-    </body>
+      sections.forEach(section => {
+        observer.observe(section);
+      });
 
-    </html>
+      // Hide button when at top
+      window.addEventListener('scroll', () => {
+        if (window.scrollY < 100) {
+          navBtn.style.opacity = '0';
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

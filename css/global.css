@@ -1,0 +1,164 @@
+/* --- Global Styles & Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    --primary-color: #2d0042;
+    --secondary-color: #6c75ec;
+    --secondary1-color: #7804ad;
+    /* From story.css */
+    --background-color: #000000;
+    --text-color: #f1f1f1;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* --- Typography --- */
+h1 {
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-left: 30px;
+    color: var(--text-color);
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    margin-left: 30px;
+    color: var(--text-color);
+}
+
+h3 {
+    font-size: 1.3em;
+    margin-bottom: 12px;
+    margin-top: 25px;
+    margin-left: 30px;
+    margin-right: 50px;
+    color: var(--text-color);
+    font-weight: normal;
+}
+
+h6 {
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+    color: var(--text-color);
+    font-family: "M PLUS 1p", sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    color: var(--text-color);
+    max-width: 1600px;
+}
+
+/* --- Font Utilities --- */
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.m-plus-1p-regular {
+    font-family: "M PLUS 1p", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.m-plus-1p-bold {
+    font-family: "M PLUS 1p", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.m-plus-1p-black {
+    font-family: "M PLUS 1p", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* --- Button Shine Effect --- */
+.btn-shine {
+    flex-shrink: 0;
+    z-index: 2;
+    position: relative;
+    padding: 16px 48px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    /* Margins are specific to pages, but these defaults were common */
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.btn-shine::before {
+    text-decoration: none;
+    content: "";
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    border: 2px solid white;
+    border-radius: 12px;
+    transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+    opacity: 0;
+    transform: scale(0.95);
+    background-image: linear-gradient(-45deg,
+            transparent 30%,
+            rgba(255, 255, 255, 0.4),
+            transparent 70%);
+    background-size: 600%;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.btn-shine:hover {
+    text-decoration: none;
+}
+
+.btn-shine:hover::before,
+.btn-shine:focus::before {
+    text-decoration: none;
+    opacity: 1;
+    transform: scale(1);
+    animation-name: animation-shine;
+}
+
+@keyframes animation-shine {
+    0% {
+        background-position: 100%;
+    }
+
+    30% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 0%;
+    }
+}
