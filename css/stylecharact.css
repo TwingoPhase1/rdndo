@@ -110,10 +110,6 @@ nav {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.character-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(108, 117, 236, 0.1);
-}
 
 .card-header {
     grid-area: header;
@@ -163,7 +159,9 @@ nav {
 
 .gallery-item {
     background-color: #1a1a1a;
-    width: 100%;
+    width: auto;
+    height: 450px;
+    margin: 0 auto;
     aspect-ratio: 9 / 16;
     border-radius: 8px;
     display: flex;
@@ -257,7 +255,7 @@ nav {
 
 @media (min-width: 1024px) {
     .character-card {
-        grid-template-columns: 40% 1fr;
+        grid-template-columns: 300px 1fr;
         grid-template-areas:
             "header header"
             "gallery body";
@@ -307,7 +305,16 @@ nav {
     }
 
     .card-gallery {
-        max-height: 300px;
+        max-height: none;
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 20px;
+    }
+
+    .gallery-item {
+        height: 50vh;
+        width: auto;
     }
 
     header {
