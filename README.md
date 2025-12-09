@@ -25,7 +25,7 @@ Le site inclut également une page "About" originale et décalée, ajoutant une 
 
 Voici un aperçu du planning :
 
-<a href="Gestion%20de%20projet/Feuille%201.html">
+<a href="https://twingophase1.github.io/rdndo/Gestion%20de%20projet/Feuille%201.html">
   <img src="Gestion%20de%20projet/PrevFeuille1.png" alt="Aperçu Gestion de Projet" width="100%" style="border-radius: 15px;">
 </a>
 
