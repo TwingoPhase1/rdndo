@@ -1,5 +1,5 @@
 <div align="center">
-  <img style="border-radius: 15px;" src="img/banner.jpg" alt="Bannière RDNDO" width="100%">
+  <img src="img/banner_gh.png" alt="Bannière RDNDO" width="100%">
   <h1>RDNDO</h1>
   <p>Fan-site dédié à <strong>Rascal Does Not Dream of Bunny Girl Senpai</strong></p>
 
@@ -26,7 +26,7 @@ Le site inclut également une page "About" originale et décalée, ajoutant une 
 Voici un aperçu du planning :
 
 <a href="https://twingophase1.github.io/rdndo/Gestion%20de%20projet/Feuille%201.html">
-  <img src="Gestion%20de%20projet/PrevFeuille1.png" alt="Aperçu Gestion de Projet" width="100%" style="border-radius: 15px;">
+  <img src="Gestion%20de%20projet/PrevFeuille1.png" alt="Aperçu Gestion de Projet" width="100%">
 </a>
 
 [![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)](https://trello.com/invite/b/6914aaf86b0aaaad0e522971/ATTI1555b82c88b091e9310a152632bd84d84AC498DD/projet-site)
